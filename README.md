@@ -1,3 +1,5 @@
+# English | [中文](README_cn.md)
+
 # TRON1 Robot Description
 
 URDF/Xacro robot models for TRON1 biped and wheel-legged robots. Ready for ROS 1 (Noetic), ROS 2 (Iron), MuJoCo, and Gazebo simulation.
