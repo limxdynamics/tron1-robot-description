@@ -106,6 +106,13 @@
                     <sphere radius="${calf_radius}"/>
                 </geometry>
             </collision>
+            <!-- hub motor housing around the wheel axle -->
+            <collision>
+                <origin rpy="1.570796327 0 0" xyz="${wheel_offset_x} ${knee_motor_offset_y*mirror} ${wheel_offset_z}"/>
+                <geometry>
+                    <cylinder length="${knee_motor_length}" radius="${knee_motor_radius}"/>
+                </geometry>
+            </collision>
             <inertial>
                 <origin rpy="0 0 0" xyz="${knee_com_x} ${knee_com_y*mirror} ${knee_com_z}"/>
                 <mass value="${knee_mass}"/>
