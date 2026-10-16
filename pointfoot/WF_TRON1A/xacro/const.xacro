@@ -36,6 +36,10 @@
     <xacro:property name="wheel_offset_x" value="0.1500"/>
     <xacro:property name="wheel_offset_y" value="0.0435"/>
     <xacro:property name="wheel_offset_z" value="-0.25981"/>
+    <!-- hub motor housing on the knee link, around the wheel axle (knee frame) -->
+    <xacro:property name="knee_motor_radius" value="0.052"/>
+    <xacro:property name="knee_motor_length" value="0.0562"/>
+    <xacro:property name="knee_motor_offset_y" value="0.0149"/>
 
     <!-- joint limits -->
     <!-- <xacro:property name="damping" value="0"/> -->

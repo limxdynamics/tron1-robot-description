@@ -241,6 +241,13 @@
                 <cylinder length="0.26" radius="0.015"/>
             </geometry>
         </collision>
+        <!-- hub motor housing on the knee, around the wheel axle -->
+        <collision>
+            <origin xyz="0.15 0.0149 -0.25981" rpy="1.5707963267948966 0 0"/>
+            <geometry>
+                <cylinder length="0.0562" radius="0.052"/>
+            </geometry>
+        </collision>
     </link>
     <joint
             name="knee_L_Joint"
@@ -464,6 +471,13 @@
             <origin xyz="0.078 0 -0.12" rpy="0 -0.55 0"/>
             <geometry>
                 <cylinder length="0.26" radius="0.015"/>
+            </geometry>
+        </collision>
+        <!-- hub motor housing on the knee, around the wheel axle -->
+        <collision>
+            <origin xyz="0.15 -0.0149 -0.25981" rpy="1.5707963267948966 0 0"/>
+            <geometry>
+                <cylinder length="0.0562" radius="0.052"/>
             </geometry>
         </collision>
     </link>
