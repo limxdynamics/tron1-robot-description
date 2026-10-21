@@ -2,6 +2,8 @@
 
 # TRON1 机器人描述
 
+> 🧭 **TRON1 开源生态的一部分。** TRON1 全部开源仓库和上手路线：[TRON1 开源生态](https://github.com/limxdynamics/tron1-rl-isaacgym/blob/master/README_cn.md#tron1-开源生态)。
+
 TRON1 双足和轮足机器人的 URDF/Xacro 模型。支持 ROS 1 (Noetic)、ROS 2 (Iron)、MuJoCo 和 Gazebo 仿真。
 
 ## 可用机器人模型

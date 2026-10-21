@@ -2,6 +2,8 @@
 
 # TRON1 Robot Description
 
+> 🧭 **Part of the TRON1 open-source ecosystem.** All TRON1 repositories and where to start: [TRON1 open-source ecosystem](https://github.com/limxdynamics/tron1-rl-isaacgym#tron1-open-source-ecosystem).
+
 URDF/Xacro robot models for TRON1 biped and wheel-legged robots. Ready for ROS 1 (Noetic), ROS 2 (Iron), MuJoCo, and Gazebo simulation.
 
 ## Available Robot Models
