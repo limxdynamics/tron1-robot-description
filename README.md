@@ -147,12 +147,6 @@ tron1-robot-description ──► tron1-rl-isaaclab / tron1-rl-isaacgym ──�
 
 **No robot yet?** Run the pre-trained policies from `tron1-rl-deploy-python` inside `tron1-mujoco-sim` — nothing to train.
 
-## Contributing
-
-Found a mesh, inertia or joint-limit issue, or want support for another simulator? [Open an issue](https://github.com/limxdynamics/tron1-robot-description/issues) or send a pull request — model fixes help everyone training on TRON1.
-
-If these models save you time, **please star the repo** — it helps more roboticists find TRON1.
-
 ## License
 
 [Apache License 2.0](LICENSE) © LimX Dynamics

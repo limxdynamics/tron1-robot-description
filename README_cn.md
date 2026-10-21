@@ -147,12 +147,6 @@ tron1-robot-description ──► tron1-rl-isaaclab / tron1-rl-isaacgym ──�
 
 **还没有真机？** 直接在 `tron1-mujoco-sim` 中运行 `tron1-rl-deploy-python` 自带的预训练策略，无需训练。
 
-## 参与贡献
-
-发现网格、惯量或关节限位问题，或希望支持其他仿真器？欢迎 [提交 Issue](https://github.com/limxdynamics/tron1-robot-description/issues) 或 Pull Request —— 每一处模型修正都能帮助所有基于 TRON1 训练的开发者。
-
-如果这些模型帮你节省了时间，**欢迎点个 Star**，让更多机器人开发者发现 TRON1。
-
 ## 许可证
 
 [Apache License 2.0](LICENSE) © LimX Dynamics
