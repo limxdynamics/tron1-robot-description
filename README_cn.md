@@ -21,9 +21,9 @@ URDF · Xacro · MuJoCo MJCF · ROS 1 · ROS 2 · Gazebo
 
 </div>
 
-> 🧭 **TRON1 开源生态的一部分** —— 覆盖从机器人模型、强化学习训练、sim-to-sim 验证到真机部署的完整链路。详见 [TRON1 开源生态地图](https://github.com/limxdynamics/tron1-rl-isaacgym/blob/master/README_cn.md#tron1-开源生态)。
+> **TRON1 开源生态的一部分** —— 覆盖从机器人模型、强化学习训练、sim-to-sim 验证到真机部署的完整链路。详见 [TRON1 开源生态地图](https://github.com/limxdynamics/tron1-rl-isaacgym/blob/master/README_cn.md#tron1-开源生态)。
 
-## ✨ 亮点
+## 亮点
 
 - **一台 TRON1，三种足端。** 点足、双足（带踝关节）、轮足之间切换，只需改一个型号名。
 - **30 秒加载模型。** 所有双足型号都附带 MuJoCo MJCF，只需 `pip install mujoco`，无需安装 ROS。
@@ -31,7 +31,7 @@ URDF · Xacro · MuJoCo MJCF · ROS 1 · ROS 2 · Gazebo
 - **为 sim-to-real 而生。** 与官方 TRON1 训练（[Isaac Lab](https://github.com/limxdynamics/tron1-rl-isaaclab) / [Isaac Gym](https://github.com/limxdynamics/tron1-rl-isaacgym)）、仿真和部署仓库使用同一套模型。
 - **内置 Gazebo 与 ros2_control 配置。** Xacro 文件已包含 Gazebo 插件、传动配置和 `ros2_control` 接口，开箱即用。
 
-## 🚀 30 秒上手（无需 ROS）
+## 30 秒上手（无需 ROS）
 
 ```bash
 git clone https://github.com/limxdynamics/tron1-robot-description.git
@@ -49,7 +49,7 @@ data = mujoco.MjData(model)
 mujoco.mj_step(model, data)
 ```
 
-## 🤖 机器人模型
+## 机器人模型
 
 | | 类型 | 型号 | 驱动自由度 | 格式 |
 |:-:|---|---|:-:|---|
@@ -78,7 +78,7 @@ tron1-robot-description/
 
 </details>
 
-## 📦 在 ROS 中使用
+## 在 ROS 中使用
 
 本仓库在 ROS 1 和 ROS 2 下都编译为同一个名为 **`robot_description`** 的功能包。
 
@@ -132,7 +132,7 @@ xacro .../pointfoot/$ROBOT_TYPE/xacro/robot.xacro use_gazebo:=true
 
 > **提示：** 展开后的 URDF 以 `package://robot_description/...` 引用网格。在 ROS 之外（如 Isaac Sim、PyBullet、Pinocchio）使用时，请将加载器的 package 路径指向本仓库的上级目录，或直接使用 MJCF 文件。
 
-## 🧩 TRON1 开源生态
+## TRON1 开源生态
 
 ```text
 tron1-robot-description ──► tron1-rl-isaaclab / tron1-rl-isaacgym ──► tron1-mujoco-sim ──► tron1-rl-deploy-* ──► TRON1 真机
@@ -141,24 +141,18 @@ tron1-robot-description ──► tron1-rl-isaaclab / tron1-rl-isaacgym ──�
 
 | 阶段 | 仓库 |
 |---|---|
-| 🏋️ 训练 | [tron1-rl-isaaclab](https://github.com/limxdynamics/tron1-rl-isaaclab)（推荐） · [tron1-rl-isaacgym](https://github.com/limxdynamics/tron1-rl-isaacgym) |
-| 🧪 仿真 | [tron1-mujoco-sim](https://github.com/limxdynamics/tron1-mujoco-sim) · [tron1-gazebo-ros](https://github.com/limxdynamics/tron1-gazebo-ros) · [tron1-gazebo-ros2](https://github.com/limxdynamics/tron1-gazebo-ros2) |
-| 🚀 部署 | [tron1-rl-deploy-python](https://github.com/limxdynamics/tron1-rl-deploy-python) · [tron1-rl-deploy-ros](https://github.com/limxdynamics/tron1-rl-deploy-ros) · [tron1-rl-deploy-ros2](https://github.com/limxdynamics/tron1-rl-deploy-ros2) |
+| 训练 | [tron1-rl-isaaclab](https://github.com/limxdynamics/tron1-rl-isaaclab)（推荐） · [tron1-rl-isaacgym](https://github.com/limxdynamics/tron1-rl-isaacgym) |
+| 仿真 | [tron1-mujoco-sim](https://github.com/limxdynamics/tron1-mujoco-sim) · [tron1-gazebo-ros](https://github.com/limxdynamics/tron1-gazebo-ros) · [tron1-gazebo-ros2](https://github.com/limxdynamics/tron1-gazebo-ros2) |
+| 部署 | [tron1-rl-deploy-python](https://github.com/limxdynamics/tron1-rl-deploy-python) · [tron1-rl-deploy-ros](https://github.com/limxdynamics/tron1-rl-deploy-ros) · [tron1-rl-deploy-ros2](https://github.com/limxdynamics/tron1-rl-deploy-ros2) |
 
 **还没有真机？** 直接在 `tron1-mujoco-sim` 中运行 `tron1-rl-deploy-python` 自带的预训练策略，无需训练。
 
-## 🤝 参与贡献
+## 参与贡献
 
 发现网格、惯量或关节限位问题，或希望支持其他仿真器？欢迎 [提交 Issue](https://github.com/limxdynamics/tron1-robot-description/issues) 或 Pull Request —— 每一处模型修正都能帮助所有基于 TRON1 训练的开发者。
 
-如果这些模型帮你节省了时间，**欢迎点个 ⭐ Star**，让更多机器人开发者发现 TRON1。
+如果这些模型帮你节省了时间，**欢迎点个 Star**，让更多机器人开发者发现 TRON1。
 
-## 📄 许可证
+## 许可证
 
 [Apache License 2.0](LICENSE) © LimX Dynamics
-
-## ⭐ Star 趋势
-
-<a href="https://star-history.com/#limxdynamics/tron1-robot-description&Date">
-  <img src="https://api.star-history.com/svg?repos=limxdynamics/tron1-robot-description&type=Date" alt="Star history" width="600">
-</a>

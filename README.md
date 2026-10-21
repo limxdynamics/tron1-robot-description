@@ -21,9 +21,9 @@ URDF · Xacro · MuJoCo MJCF · ROS 1 · ROS 2 · Gazebo
 
 </div>
 
-> 🧭 **Part of the TRON1 open-source ecosystem** — from robot model to training, sim-to-sim and real-robot deployment. See the [ecosystem map](https://github.com/limxdynamics/tron1-rl-isaacgym#tron1-open-source-ecosystem).
+> **Part of the TRON1 open-source ecosystem** — from robot model to training, sim-to-sim and real-robot deployment. See the [ecosystem map](https://github.com/limxdynamics/tron1-rl-isaacgym#tron1-open-source-ecosystem).
 
-## ✨ Why this repo
+## Why this repo
 
 - **One TRON1, three feet.** Swap between point-foot, sole-foot (with ankle) and wheel-foot by changing one model name.
 - **Load it in 30 seconds.** Every biped variant ships a MuJoCo MJCF — `pip install mujoco` is all you need, no ROS required.
@@ -31,7 +31,7 @@ URDF · Xacro · MuJoCo MJCF · ROS 1 · ROS 2 · Gazebo
 - **Built for sim-to-real.** These are the models used across the official TRON1 training ([Isaac Lab](https://github.com/limxdynamics/tron1-rl-isaaclab) / [Isaac Gym](https://github.com/limxdynamics/tron1-rl-isaacgym)), simulation and deployment stack.
 - **Gazebo and ros2_control wiring included.** Xacro files carry Gazebo plugins, transmissions and a `ros2_control` interface out of the box.
 
-## 🚀 Try it in 30 seconds (no ROS)
+## Try it in 30 seconds (no ROS)
 
 ```bash
 git clone https://github.com/limxdynamics/tron1-robot-description.git
@@ -49,7 +49,7 @@ data = mujoco.MjData(model)
 mujoco.mj_step(model, data)
 ```
 
-## 🤖 Robot models
+## Robot models
 
 | | Type | Models | Actuated DoF | Formats |
 |:-:|---|---|:-:|---|
@@ -78,7 +78,7 @@ tron1-robot-description/
 
 </details>
 
-## 📦 Use with ROS
+## Use with ROS
 
 The repo builds as a single ROS package named **`robot_description`** on both ROS 1 and ROS 2.
 
@@ -132,7 +132,7 @@ xacro .../pointfoot/$ROBOT_TYPE/xacro/robot.xacro use_gazebo:=true
 
 > **Tip:** the flattened URDFs reference meshes as `package://robot_description/...`. Outside ROS (e.g. Isaac Sim, PyBullet, Pinocchio), point your loader's package path at this repo's parent folder, or use the MJCF files directly.
 
-## 🧩 TRON1 ecosystem
+## TRON1 ecosystem
 
 ```text
 tron1-robot-description ──► tron1-rl-isaaclab / tron1-rl-isaacgym ──► tron1-mujoco-sim ──► tron1-rl-deploy-* ──► real TRON1
@@ -141,24 +141,18 @@ tron1-robot-description ──► tron1-rl-isaaclab / tron1-rl-isaacgym ──�
 
 | Stage | Repository |
 |---|---|
-| 🏋️ Train | [tron1-rl-isaaclab](https://github.com/limxdynamics/tron1-rl-isaaclab) (recommended) · [tron1-rl-isaacgym](https://github.com/limxdynamics/tron1-rl-isaacgym) |
-| 🧪 Simulate | [tron1-mujoco-sim](https://github.com/limxdynamics/tron1-mujoco-sim) · [tron1-gazebo-ros](https://github.com/limxdynamics/tron1-gazebo-ros) · [tron1-gazebo-ros2](https://github.com/limxdynamics/tron1-gazebo-ros2) |
-| 🚀 Deploy | [tron1-rl-deploy-python](https://github.com/limxdynamics/tron1-rl-deploy-python) · [tron1-rl-deploy-ros](https://github.com/limxdynamics/tron1-rl-deploy-ros) · [tron1-rl-deploy-ros2](https://github.com/limxdynamics/tron1-rl-deploy-ros2) |
+| Train | [tron1-rl-isaaclab](https://github.com/limxdynamics/tron1-rl-isaaclab) (recommended) · [tron1-rl-isaacgym](https://github.com/limxdynamics/tron1-rl-isaacgym) |
+| Simulate | [tron1-mujoco-sim](https://github.com/limxdynamics/tron1-mujoco-sim) · [tron1-gazebo-ros](https://github.com/limxdynamics/tron1-gazebo-ros) · [tron1-gazebo-ros2](https://github.com/limxdynamics/tron1-gazebo-ros2) |
+| Deploy | [tron1-rl-deploy-python](https://github.com/limxdynamics/tron1-rl-deploy-python) · [tron1-rl-deploy-ros](https://github.com/limxdynamics/tron1-rl-deploy-ros) · [tron1-rl-deploy-ros2](https://github.com/limxdynamics/tron1-rl-deploy-ros2) |
 
 **No robot yet?** Run the pre-trained policies from `tron1-rl-deploy-python` inside `tron1-mujoco-sim` — nothing to train.
 
-## 🤝 Contributing
+## Contributing
 
 Found a mesh, inertia or joint-limit issue, or want support for another simulator? [Open an issue](https://github.com/limxdynamics/tron1-robot-description/issues) or send a pull request — model fixes help everyone training on TRON1.
 
-If these models save you time, **please give the repo a ⭐** — it helps more roboticists find TRON1.
+If these models save you time, **please star the repo** — it helps more roboticists find TRON1.
 
-## 📄 License
+## License
 
 [Apache License 2.0](LICENSE) © LimX Dynamics
-
-## ⭐ Star history
-
-<a href="https://star-history.com/#limxdynamics/tron1-robot-description&Date">
-  <img src="https://api.star-history.com/svg?repos=limxdynamics/tron1-robot-description&type=Date" alt="Star history" width="600">
-</a>
