@@ -40,7 +40,7 @@ pip install mujoco
 python -m mujoco.viewer --mjcf=tron1-robot-description/pointfoot/WF_TRON1A/xml/robot.xml
 ```
 
-把 `WF_TRON1A` 换成下表中任意双足型号即可 —— 八个双足型号都附 MJCF。轮足四足（`WL_P311D` /
+把 `WF_TRON1A` 换成下表中任意双足型号即可 —— 十个双足型号都附 MJCF。轮足四足（`WL_P311D` /
 `WL_P311E`）只提供 URDF 与 SRDF，没有 `xml/robot.xml`。也可以在 Python 中加载：
 
 ```python

@@ -41,7 +41,7 @@ pip install mujoco
 python -m mujoco.viewer --mjcf=tron1-robot-description/pointfoot/WF_TRON1A/xml/robot.xml
 ```
 
-Swap `WF_TRON1A` for any biped model in the table below — all eight ship an MJCF. The wheel-legged
+Swap `WF_TRON1A` for any biped model in the table below — all ten ship an MJCF. The wheel-legged
 quadruped (`WL_P311D` / `WL_P311E`) ships URDF and SRDF only, so it has no `xml/robot.xml`. Or load
 it from Python:
 
