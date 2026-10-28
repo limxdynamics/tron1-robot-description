@@ -29,7 +29,9 @@ URDF · Xacro · MuJoCo MJCF · ROS 1 · ROS 2 · Gazebo
 - **Load it in 30 seconds.** Every biped variant ships a MuJoCo MJCF — `pip install mujoco` is all you need, no ROS required.
 - **Same models, every toolchain.** URDF, Xacro and MJCF from one source, working with ROS 1 Noetic, ROS 2 Iron, Gazebo and MuJoCo.
 - **Built for sim-to-real.** These are the models used across the official TRON1 training ([Isaac Lab](https://github.com/limxdynamics/tron1-rl-isaaclab) / [Isaac Gym](https://github.com/limxdynamics/tron1-rl-isaacgym)), simulation and deployment stack.
-- **Gazebo and ros2_control wiring included.** Xacro files carry Gazebo plugins, transmissions and a `ros2_control` interface out of the box.
+- **Gazebo and ros2_control wiring included.** Transmissions and the Gazebo IMU sensor plugin are
+  emitted by default; the `ros2_control` hardware block and the `gazebo_ros2_control` plugin come with
+  `use_gazebo:=true`.
 
 ## Try it in 30 seconds (no ROS)
 
@@ -39,7 +41,9 @@ pip install mujoco
 python -m mujoco.viewer --mjcf=tron1-robot-description/pointfoot/WF_TRON1A/xml/robot.xml
 ```
 
-Swap `WF_TRON1A` for any model in the table below. Or load it from Python:
+Swap `WF_TRON1A` for any biped model in the table below — all eight ship an MJCF. The wheel-legged
+quadruped (`WL_P311D` / `WL_P311E`) ships URDF and SRDF only, so it has no `xml/robot.xml`. Or load
+it from Python:
 
 ```python
 import mujoco
@@ -69,7 +73,8 @@ tron1-robot-description/
 │   │   ├── xacro/             # robot.xacro + gazebo / transmission / ros2_control
 │   │   ├── xml/robot.xml      # MuJoCo MJCF
 │   │   └── meshes/            # STL meshes
-│   └── meshes_camera/         # optional Intel RealSense D435 mesh (referenced, commented out, in *_TRON1B)
+│   └── meshes_camera/         # optional Intel RealSense D435 mesh (referenced from a commented-out
+│                              # block in every *_TRON1A / *_TRON1B model)
 ├── wheellegged/
 │   └── <MODEL>/{urdf,srdf,meshes}
 ├── CMakeLists.txt             # builds as package `robot_description` on ROS 1 and ROS 2
@@ -80,15 +85,18 @@ tron1-robot-description/
 
 ## Use with ROS
 
-The repo builds as a single ROS package named **`robot_description`** on both ROS 1 and ROS 2.
-
-<details open>
-<summary><b>ROS 1 (Noetic)</b></summary>
+The repo builds as a single ROS package named **`robot_description`** on both ROS 1 and ROS 2. The workspace and the clone are the same for both, so run this once and then open the block for your ROS version:
 
 ```bash
 mkdir -p ~/limx_ws/src && cd ~/limx_ws/src
 git clone https://github.com/limxdynamics/tron1-robot-description.git
 cd ~/limx_ws
+```
+
+<details open>
+<summary><b>ROS 1 (Noetic)</b></summary>
+
+```bash
 source /opt/ros/noetic/setup.bash
 catkin_make install
 source devel/setup.bash
@@ -106,9 +114,6 @@ rosrun xacro xacro $(rospack find robot_description)/pointfoot/$ROBOT_TYPE/xacro
 <summary><b>ROS 2 (Iron)</b></summary>
 
 ```bash
-mkdir -p ~/limx_ws/src && cd ~/limx_ws/src
-git clone https://github.com/limxdynamics/tron1-robot-description.git
-cd ~/limx_ws
 source /opt/ros/iron/setup.bash
 colcon build --cmake-args -DCMAKE_BUILD_TYPE=Release
 source install/setup.bash
@@ -129,6 +134,10 @@ xacro $(ros2 pkg prefix robot_description)/share/robot_description/pointfoot/$RO
 ```bash
 xacro .../pointfoot/$ROBOT_TYPE/xacro/robot.xacro use_gazebo:=true
 ```
+
+> **Note:** `use_gazebo:=true` expands `$(find pointfoot_gazebo)` to locate the controller config, and
+> `pointfoot_gazebo` is not part of this repository — without it installed, `xacro` stops at that line
+> with a package-not-found error. Everything else in this table needs only the files here.
 
 > **Tip:** the flattened URDFs reference meshes as `package://robot_description/...`. Outside ROS (e.g. Isaac Sim, PyBullet, Pinocchio), point your loader's package path at this repo's parent folder, or use the MJCF files directly.
 

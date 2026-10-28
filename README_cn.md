@@ -29,7 +29,8 @@ URDF · Xacro · MuJoCo MJCF · ROS 1 · ROS 2 · Gazebo
 - **30 秒加载模型。** 所有双足型号都附带 MuJoCo MJCF，只需 `pip install mujoco`，无需安装 ROS。
 - **一套模型，全工具链通用。** 同源提供 URDF、Xacro、MJCF，支持 ROS 1 Noetic、ROS 2 Iron、Gazebo 和 MuJoCo。
 - **为 sim-to-real 而生。** 与官方 TRON1 训练（[Isaac Lab](https://github.com/limxdynamics/tron1-rl-isaaclab) / [Isaac Gym](https://github.com/limxdynamics/tron1-rl-isaacgym)）、仿真和部署仓库使用同一套模型。
-- **内置 Gazebo 与 ros2_control 配置。** Xacro 文件已包含 Gazebo 插件、传动配置和 `ros2_control` 接口，开箱即用。
+- **内置 Gazebo 与 ros2_control 配置。** 传动配置与 Gazebo IMU 传感器插件默认输出；`ros2_control`
+  硬件块和 `gazebo_ros2_control` 插件需带 `use_gazebo:=true`。
 
 ## 30 秒上手（无需 ROS）
 
@@ -39,7 +40,8 @@ pip install mujoco
 python -m mujoco.viewer --mjcf=tron1-robot-description/pointfoot/WF_TRON1A/xml/robot.xml
 ```
 
-把 `WF_TRON1A` 换成下表中任意型号即可。也可以在 Python 中加载：
+把 `WF_TRON1A` 换成下表中任意双足型号即可 —— 八个双足型号都附 MJCF。轮足四足（`WL_P311D` /
+`WL_P311E`）只提供 URDF 与 SRDF，没有 `xml/robot.xml`。也可以在 Python 中加载：
 
 ```python
 import mujoco
@@ -69,7 +71,8 @@ tron1-robot-description/
 │   │   ├── xacro/             # robot.xacro + gazebo / transmission / ros2_control
 │   │   ├── xml/robot.xml      # MuJoCo MJCF
 │   │   └── meshes/            # STL 网格
-│   └── meshes_camera/         # 可选 Intel RealSense D435 网格（*_TRON1B 中已引用，当前为注释状态）
+│   └── meshes_camera/         # 可选 Intel RealSense D435 网格（*_TRON1A / *_TRON1B 中各有一段被注释
+│                              # 掉的引用）
 ├── wheellegged/
 │   └── <型号>/{urdf,srdf,meshes}
 ├── CMakeLists.txt             # 在 ROS 1 / ROS 2 下均编译为 `robot_description` 包
@@ -80,15 +83,18 @@ tron1-robot-description/
 
 ## 在 ROS 中使用
 
-本仓库在 ROS 1 和 ROS 2 下都编译为同一个名为 **`robot_description`** 的功能包。
-
-<details open>
-<summary><b>ROS 1 (Noetic)</b></summary>
+本仓库在 ROS 1 和 ROS 2 下都编译为同一个名为 **`robot_description`** 的功能包。两者的工作空间和克隆步骤完全相同，先执行一次，再选择对应的折叠块：
 
 ```bash
 mkdir -p ~/limx_ws/src && cd ~/limx_ws/src
 git clone https://github.com/limxdynamics/tron1-robot-description.git
 cd ~/limx_ws
+```
+
+<details open>
+<summary><b>ROS 1 (Noetic)</b></summary>
+
+```bash
 source /opt/ros/noetic/setup.bash
 catkin_make install
 source devel/setup.bash
@@ -106,9 +112,6 @@ rosrun xacro xacro $(rospack find robot_description)/pointfoot/$ROBOT_TYPE/xacro
 <summary><b>ROS 2 (Iron)</b></summary>
 
 ```bash
-mkdir -p ~/limx_ws/src && cd ~/limx_ws/src
-git clone https://github.com/limxdynamics/tron1-robot-description.git
-cd ~/limx_ws
 source /opt/ros/iron/setup.bash
 colcon build --cmake-args -DCMAKE_BUILD_TYPE=Release
 source install/setup.bash
@@ -129,6 +132,9 @@ xacro $(ros2 pkg prefix robot_description)/share/robot_description/pointfoot/$RO
 ```bash
 xacro .../pointfoot/$ROBOT_TYPE/xacro/robot.xacro use_gazebo:=true
 ```
+
+> **注意：** `use_gazebo:=true` 会展开 `$(find pointfoot_gazebo)` 去取控制器配置，而 `pointfoot_gazebo`
+> 不在本仓库内 —— 未安装时 `xacro` 会在该行报「找不到功能包」。表中其他用法只依赖本仓库的文件。
 
 > **提示：** 展开后的 URDF 以 `package://robot_description/...` 引用网格。在 ROS 之外（如 Isaac Sim、PyBullet、Pinocchio）使用时，请将加载器的 package 路径指向本仓库的上级目录，或直接使用 MJCF 文件。
 
