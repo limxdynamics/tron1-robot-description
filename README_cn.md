@@ -21,7 +21,7 @@ URDF · Xacro · MuJoCo MJCF · ROS 1 · ROS 2 · Gazebo
 
 </div>
 
-> **TRON1 开源生态的一部分** —— 覆盖从机器人模型、强化学习训练、sim-to-sim 验证到真机部署的完整链路。详见 [TRON1 开源生态地图](https://github.com/limxdynamics/tron1-rl-isaacgym/blob/master/README_cn.md#tron1-开源生态)。
+> **TRON1 开源生态的一部分。** 上手路线和其他 TRON1 仓库：[TRON1 快速上手](https://github.com/limxdynamics/limxdynamics/blob/main/doc/quickstart_cn.md#tron1)。
 
 ## 亮点
 

@@ -21,7 +21,7 @@ URDF · Xacro · MuJoCo MJCF · ROS 1 · ROS 2 · Gazebo
 
 </div>
 
-> **Part of the TRON1 open-source ecosystem** — from robot model to training, sim-to-sim and real-robot deployment. See the [ecosystem map](https://github.com/limxdynamics/tron1-rl-isaacgym#tron1-open-source-ecosystem).
+> **Part of the TRON1 open-source ecosystem.** Where to start and the other TRON1 repositories: [TRON1 quick start](https://github.com/limxdynamics/limxdynamics/blob/main/doc/quickstart.md#tron1).
 
 ## Why this repo
 
