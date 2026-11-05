@@ -16,6 +16,8 @@ URDF · Xacro · MuJoCo MJCF · ROS 1 · ROS 2 · Gazebo
 [![GitHub stars](https://img.shields.io/github/stars/limxdynamics/tron1-robot-description?style=social)](https://github.com/limxdynamics/tron1-robot-description/stargazers)
 [![微信开发者社区](https://img.shields.io/badge/%E5%BE%AE%E4%BF%A1-%E5%BC%80%E5%8F%91%E8%80%85%E7%A4%BE%E5%8C%BA-07C160?logo=wechat&logoColor=white)](https://github.com/limxdynamics/limxdynamics/blob/main/doc/wechat_qr.png)
 
+<p align="center"><sub>合作采购请联系 <a href="mailto:opensource@limxdynamics.com">opensource@limxdynamics.com</a></sub></p>
+
 <img src="docs/images/hero.png" alt="TRON1 点足、双足、轮足及轮足四足模型" width="100%">
 
 <sub>以上图片直接由本仓库的 MJCF / URDF 文件渲染生成。</sub>

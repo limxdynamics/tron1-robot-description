@@ -16,6 +16,8 @@ URDF · Xacro · MuJoCo MJCF · ROS 1 · ROS 2 · Gazebo
 [![GitHub stars](https://img.shields.io/github/stars/limxdynamics/tron1-robot-description?style=social)](https://github.com/limxdynamics/tron1-robot-description/stargazers)
 [![WeChat Community](https://img.shields.io/badge/WeChat-Developer%20Community-07C160?logo=wechat&logoColor=white)](https://github.com/limxdynamics/limxdynamics/blob/main/doc/wechat_qr.png)
 
+<p align="center"><sub>For partnership and procurement inquiries, contact <a href="mailto:opensource@limxdynamics.com">opensource@limxdynamics.com</a></sub></p>
+
 <img src="docs/images/hero.png" alt="TRON1 point-foot, sole-foot, wheel-foot and wheel-legged quadruped models" width="100%">
 
 <sub>Rendered directly from the MJCF / URDF files in this repository.</sub>
