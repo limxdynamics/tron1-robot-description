@@ -2,6 +2,11 @@
 
 **English** | [中文](README_cn.md)
 
+<!-- limx-community:start -->
+<!-- Managed by limxdynamics/limxdynamics/.github/community/sync_community.py; QR code: doc/wechat_qr.png in that repo -->
+<p align="center"><a href="https://github.com/limxdynamics/limxdynamics/blob/main/doc/wechat_qr.png"><img src="https://img.shields.io/badge/Join%20Our%20WeChat%20Community-All%20Projects%20Welcome-07C160?style=for-the-badge&logo=wechat&logoColor=white" alt="WeChat Community"></a></p>
+<!-- limx-community:end -->
+
 # TRON1 Robot Description
 
 **Open, simulation-ready robot models for the LimX Dynamics TRON1 biped — point-foot, sole-foot and wheel-foot — plus a wheel-legged quadruped.**
