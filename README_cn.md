@@ -14,6 +14,7 @@ URDF · Xacro · MuJoCo MJCF · ROS 1 · ROS 2 · Gazebo
 [![MuJoCo](https://img.shields.io/badge/MuJoCo-ready-0A7BBB)](https://mujoco.org/)
 [![Gazebo](https://img.shields.io/badge/Gazebo-ready-F58113)](https://gazebosim.org/)
 [![GitHub stars](https://img.shields.io/github/stars/limxdynamics/tron1-robot-description?style=social)](https://github.com/limxdynamics/tron1-robot-description/stargazers)
+[![Hugging Face](https://img.shields.io/badge/Hugging%20Face-limxdynamics-FFD21E?logo=huggingface&logoColor=black)](https://huggingface.co/limxdynamics)
 [![微信开发者社区](https://img.shields.io/badge/%E5%BE%AE%E4%BF%A1-%E5%BC%80%E5%8F%91%E8%80%85%E7%A4%BE%E5%8C%BA-07C160?logo=wechat&logoColor=white)](https://github.com/limxdynamics/limxdynamics/blob/main/doc/wechat_qr.png)
 
 <p align="center"><sub>合作采购请联系 <a href="mailto:opensource@limxdynamics.com">opensource@limxdynamics.com</a></sub></p>
