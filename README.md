@@ -2,11 +2,6 @@
 
 **English** | [中文](README_cn.md)
 
-<!-- limx-community:start -->
-<!-- Managed by limxdynamics/limxdynamics/.github/community/sync_community.py; QR code: doc/wechat_qr.png in that repo -->
-<p align="center"><a href="https://github.com/limxdynamics/limxdynamics/blob/main/doc/wechat_qr.png"><img src="https://img.shields.io/badge/Join%20Our%20WeChat%20Community-All%20Projects%20Welcome-07C160?style=for-the-badge&logo=wechat&logoColor=white" alt="WeChat Community"></a></p>
-<!-- limx-community:end -->
-
 # TRON1 Robot Description
 
 **Open, simulation-ready robot models for the LimX Dynamics TRON1 biped — point-foot, sole-foot and wheel-foot — plus a wheel-legged quadruped.**
@@ -19,6 +14,7 @@ URDF · Xacro · MuJoCo MJCF · ROS 1 · ROS 2 · Gazebo
 [![MuJoCo](https://img.shields.io/badge/MuJoCo-ready-0A7BBB)](https://mujoco.org/)
 [![Gazebo](https://img.shields.io/badge/Gazebo-ready-F58113)](https://gazebosim.org/)
 [![GitHub stars](https://img.shields.io/github/stars/limxdynamics/tron1-robot-description?style=social)](https://github.com/limxdynamics/tron1-robot-description/stargazers)
+[![WeChat Community](https://img.shields.io/badge/WeChat-Developer%20Community-07C160?logo=wechat&logoColor=white)](https://github.com/limxdynamics/limxdynamics/blob/main/doc/wechat_qr.png)
 
 <img src="docs/images/hero.png" alt="TRON1 point-foot, sole-foot, wheel-foot and wheel-legged quadruped models" width="100%">
 

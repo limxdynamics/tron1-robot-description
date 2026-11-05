@@ -2,11 +2,6 @@
 
 [English](README.md) | **中文**
 
-<!-- limx-community:start -->
-<!-- Managed by limxdynamics/limxdynamics/.github/community/sync_community.py; QR code: doc/wechat_qr.png in that repo -->
-<p align="center"><a href="https://github.com/limxdynamics/limxdynamics/blob/main/doc/wechat_qr.png"><img src="https://img.shields.io/badge/%E5%BE%AE%E4%BF%A1%E5%BC%80%E5%8F%91%E8%80%85%E7%BE%A4-%E6%89%AB%E7%A0%81%E5%8A%A0%E5%85%A5%20%C2%B7%20%E8%A6%86%E7%9B%96%E5%85%A8%E9%83%A8%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE-07C160?style=for-the-badge&logo=wechat&logoColor=white" alt="微信开发者社区"></a></p>
-<!-- limx-community:end -->
-
 # TRON1 Robot Description
 
 **逐际动力 TRON1 双足机器人的开源仿真模型 —— 点足、双足（带踝关节）、轮足三种形态，另附轮足四足模型。**
@@ -19,6 +14,7 @@ URDF · Xacro · MuJoCo MJCF · ROS 1 · ROS 2 · Gazebo
 [![MuJoCo](https://img.shields.io/badge/MuJoCo-ready-0A7BBB)](https://mujoco.org/)
 [![Gazebo](https://img.shields.io/badge/Gazebo-ready-F58113)](https://gazebosim.org/)
 [![GitHub stars](https://img.shields.io/github/stars/limxdynamics/tron1-robot-description?style=social)](https://github.com/limxdynamics/tron1-robot-description/stargazers)
+[![微信开发者社区](https://img.shields.io/badge/%E5%BE%AE%E4%BF%A1-%E5%BC%80%E5%8F%91%E8%80%85%E7%A4%BE%E5%8C%BA-07C160?logo=wechat&logoColor=white)](https://github.com/limxdynamics/limxdynamics/blob/main/doc/wechat_qr.png)
 
 <img src="docs/images/hero.png" alt="TRON1 点足、双足、轮足及轮足四足模型" width="100%">
 
